@@ -1,7 +1,7 @@
 var answers=["a library of js","append","Document Object Model","front-end logic","slideUp,fadeIn,delay"];
-var scorePerCorrect=5;
+var scorePerCorrect=25;
 function percentage(){
-return "yourscore is" + parseInt((score/25) * 100) + "%";
+return "yourscore is" + parseInt(100) + "%";
 }
 
 $("document").ready(function(){
@@ -18,27 +18,21 @@ $("document").ready(function(){
     $("#questionsIncomplete").text("work out all questions first");
     $("#questionsComplete").slideUp();
       }
-      else if(answerOne===answers[0]){
+    else{
+       if(answerOne===answers[0]){
     score += scorePerCorrect;}
-      else if(answerTwo===answers[1]){
-    score += scorePerCorrect;
-      }else if(answerThree===answers[2]){
-    score += scorePerCorrect;
-      }else if(answerFour===answers[3]){
-    score += scorePerCorrect;
-      }
-      else(answerFive===answers[4]){
-    score += scorePerCorrect;
-      }
-
-      $("input[type=radio][name=questionOneoption]:checked").prop("checked", false);
-      $("input[type=radio][name=questionTwooption]:checked").prop("checked", false);
-      $("input[type=radio][name=questionThreeoption]:checked").prop("checked", false);
-      $("input[type=radio][name=questionFouroption]:checked").prop("checked", false);
-      $("input[type=radio][name=questionFiveoption]:checked").prop("checked", false);
-      $("#questionsIncomplete").text("");
-      $("#result").text(percentage(score));
-
+       if(answerTwo===answers[1]){
+    score += scorePerCorrect;}
+       if(answerThree===answers[2]){
+    score += scorePerCorrect;}
+       if(answerFour===answers[3]){
+    score += scorePerCorrect;}
+       if(answerFive===answers[4]){
+    score += scorePerCorrect;}
+    $("#questionsIncomplete").text("");
+    $("#result").text(percentage(score));
+    }
        event.preventDefault();
+      
      });
   });
