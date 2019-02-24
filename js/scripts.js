@@ -14,7 +14,7 @@ $("document").ready(function(){
     var answerFour=($("input[type=radio][name=questionFouranswer]:checked").val());
     var answerFive=($("input[type=radio][name=questionFiveanswer]:checked").val());
 
-    if(answerOne===undefined || answerTwo===undefined || answerThree===undefined || answerFour=undefined || answerFive=undefined){
+    if(answerOne===undefined || answerTwo===undefined || answerThree===undefined || answerFour===undefined || answerFive===undefined){
     $("#questionsIncomplete").text("work out all questions first");
     $("#questionsComplete").slideUp();
       }
@@ -42,69 +42,3 @@ $("document").ready(function(){
        event.preventDefault();
      });
   });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  })
-})
