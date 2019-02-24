@@ -15,21 +15,22 @@ $("document").ready(function(){
     var answerFive=($("input[type=radio][name=questionFiveanswer]:checked").val());
 
     if(answerOne===undefined || answerTwo===undefined || answerThree===undefined || answerFour=undefined || answerFive=undefined){
-      $("#questionsIncomplete").text("work out all questions first");
-      $("#questionsComplete").slideUp();
-    }else
-      {  if(answerOne===answers[0]){
-      score += scorePerCorrect;
-        }if(answerTwo===answers[1]){
-      score += scorePerCorrect;
-        }if(answerThree===answers[2]){
-      score += scorePerCorrect;
-        }if(answerFour===answers[3]){
-      score += scorePerCorrect;
-        }if(answerFive===answers[4]){
-      score += scorePerCorrect;
-        }
+    $("#questionsIncomplete").text("work out all questions first");
+    $("#questionsComplete").slideUp();
       }
+      else if(answerOne===answers[0]){
+    score += scorePerCorrect;}
+      else if(answerTwo===answers[1]){
+    score += scorePerCorrect;
+      }else if(answerThree===answers[2]){
+    score += scorePerCorrect;
+      }else if(answerFour===answers[3]){
+    score += scorePerCorrect;
+      }
+      else(answerFive===answers[4]){
+    score += scorePerCorrect;
+      }
+
       $("input[type=radio][name=questionOneoption]:checked").prop("checked", false);
       $("input[type=radio][name=questionTwooption]:checked").prop("checked", false);
       $("input[type=radio][name=questionThreeoption]:checked").prop("checked", false);
