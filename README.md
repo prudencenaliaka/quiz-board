@@ -15,7 +15,7 @@ The project is about coming up with a website that consists of a javascript test
 ## Dependencies
 As per the moment there are no dependencies
 ## Known Bugs
-
+there are no bags
 ## Technologies Used
 HTML
 JS
