@@ -13,7 +13,7 @@ $(document).ready(function(){
 
     if(answerOne===undefined || answerTwo===undefined || answerThree===undefined || answerFour===undefined || answerFive===undefined){
     $("#questionsIncomplete").text("work out all questions first");
-    $("#questionsIncomplete").slideUp(2000);
+    $("#questionsIncomplete").slideUp(20000);
 
 
       }
@@ -34,10 +34,16 @@ $(document).ready(function(){
 
     }
     function percentage(score){
-    return "yourscore is " + (score) + "%";
+    return alert ("your score is " + (score) + "%" )
     }
-
-       event.preventDefault();
+    if (score >= 80 ){
+      $("#result").text("excellent");
+    }else if(score >= 50){
+      $("#result").text("fair");
+    } else{
+       $("#result").text("below average,retake unit");
+    }
+     event.preventDefault();
 
      });
   });
